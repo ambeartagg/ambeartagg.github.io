@@ -1,0 +1,22 @@
+* {
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: ArtDeco;
+    src: url("../artisual_deco_2/ArtisualDecoBlack_PERSONAL_USE_ONLY.otf");
+  }
+
+
+body {background-color: #e3f8e0;
+
+
+}
+
+h1
+{
+    text-align: center;
+    font-family: ArtDeco;
+    color: #1D2B14;
+    font-size: 100px;
+}
