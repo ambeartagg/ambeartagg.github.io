@@ -7,8 +7,8 @@
     src: url("../artisual_deco_2/ArtisualDecoBlack_PERSONAL_USE_ONLY.otf");
   }
 
-
-body {background-color: #e3f8e0;
+  
+body {background-color: #D4D4A5;
 
 
 }
@@ -17,6 +17,31 @@ h1
 {
     text-align: center;
     font-family: ArtDeco;
-    color: #1D2B14;
+    color: #4E6E6B;
     font-size: 100px;
 }
+
+h2
+{
+    text-align: center;
+    color: #AC7C46;
+    
+
+}
+
+.bg-company-red {
+    background-color: #829775 !important;
+}
+
+img
+{
+   
+    max-width: 100%;
+    height: auto;
+  
+}
+
+video {
+    width: 100%;
+    height: auto;
+  }
