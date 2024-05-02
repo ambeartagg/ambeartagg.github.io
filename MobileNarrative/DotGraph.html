@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+
+<!-- Load d3.js -->
+<script src="https://d3js.org/d3.v4.js"></script>
+
+<!-- Create a div where the graph will take place -->
+<div id="my_dataviz"></div>
+
+<script>
+  // set the dimensions and margins of the graph
+  var margin = { top: 10, right: 30, bottom: 100, left: 60 },
+    width = 1200 - margin.left - margin.right,
+    height = 400 - margin.top - margin.bottom;
+
+  // append the svg object to the body of the page
+  var svg = d3.select("#my_dataviz")
+    .append("svg")
+    .attr("width", width + margin.left + margin.right)
+    .attr("height", height + margin.top + margin.bottom)
+    .append("g")
+    .attr("transform",
+      "translate(" + margin.left + "," + margin.top + ")");
+
+  //Read the data
+
+  //d3.csv("https://raw.githubusercontent.com/holtzy/D3-graph-gallery/master/DATA/connectedscatter.csv", 
+  // When reading the csv, I must format variables:
+  let data = [
+    { "genre": "Punk", "rating": "8" },
+    { "genre": "Post-punk", "rating": "10" },
+    { "genre": "Grunge", "rating": "10" },
+    { "genre": "Emo", "rating": "7" },
+    { "genre": "Gothic rock", "rating": "8" },
+    { "genre": "Post-punk", "rating": "8" },
+    { "genre": "Alternative rock", "rating": "8/" },
+    { "genre": "Trip hop", "rating": "8" },
+    { "genre": "Hard rock", "rating": "8" },
+    { "genre": "Punk", "rating": "7" },
+    { "genre": "Grunge", "rating": "9" },
+    { "genre": "Emo", "rating": "8" },
+    { "genre": "Indie rock", "rating": "7" },
+    { "genre": "Alternative rock", "rating": "7" },
+    { "genre": "Alternative rock", "rating": "7" },
+    { "genre": "Post-punk", "rating": "8" },
+    { "genre": "New wave", "rating": "9" },
+    { "genre": "Grunge", "rating": "8" },
+    { "genre": "Alternative rock", "rating": "9" },
+    { "genre": "Metal", "rating": "8" },
+    { "genre": "Gothic rock", "rating": "7" },
+    { "genre": "Punk", "rating": "7" },
+    { "genre": "Metal", "rating": "8" },
+    { "genre": "Metal", "rating": "8" },
+    { "genre": "Punk", "rating": "8" },
+    { "genre": "Grunge", "rating": "7" },
+    { "genre": "Gothic rock", "rating": "7" },
+    { "genre": "New wave", "rating": "8" },
+    { "genre": "Punk", "rating": "9" },
+    { "genre": "Ska", "rating": "8" },
+    { "genre": "Grunge", "rating": "9" },
+    { "genre": "Alternative rock", "rating": "8" },
+    { "genre": "Alternative rock", "rating": "8" },
+    { "genre": "Shoegaze", "rating": "8" },
+    { "genre": "Metal", "rating": "7" },
+    { "genre": "New wave", "rating": "9" },
+    { "genre": "Punk", "rating": "8" },
+    { "genre": "Punk", "rating": "7" },
+    { "genre": "Indie rock", "rating": "9" },
+    { "genre": "Shoegaze", "rating": "9" },
+    { "genre": "Metal", "rating": "7" },
+    { "genre": "Psychedelic rock", "rating": "7" },
+    { "genre": "Psychedelic rock", "rating": "9" },
+    { "genre": "Hard rock", "rating": "8" },
+    { "genre": "Punk", "rating": "7" },
+    { "genre": "Garage punk", "rating": "9" },
+    { "genre": "Punk", "rating": "6" },
+    { "genre": "Alternative rock", "rating": "8" },
+    { "genre": "Gothic rock", "rating": "7" },
+    { "genre": "Post-punk", "rating": "9" },
+    { "genre": "Punk", "rating": "8" },
+    { "genre": "Ska", "rating": "7" },
+    { "genre": "Grunge", "rating": "9" },
+    { "genre": "Alternative rock", "rating": "8" },
+    { "genre": "Alternative rock", "rating": "8" },
+    { "genre": "Shoegaze", "rating": "7" },
+    { "genre": "Metal", "rating": "8" },
+    { "genre": "New wave", "rating": "7" },
+    { "genre": "Punk", "rating": "9" }
+
+  ];
+
+  // Add X axis --> it is a date format
+  console.log(d3.extent(data, function (d) { return d.genre; }))
+
+  function onlyUnique(value, index, array) {
+    return array.indexOf(value) === index;
+  }
+
+  let genres = data.map(function (d) { return d.genre; }); //An array of all genres in dataset
+  let uniqueGenres = genres.filter(onlyUnique); //Removes all duplicates from genres array
+  let numberOfTickMarks = uniqueGenres.length; //# of unique genres without duplicats
+  let lengthOfTickMark = width / numberOfTickMarks; //Width of graph divided by # of unique genres
+
+  //This builds the range for x-axis
+  let range = [10];
+  for (let i = 1; i < numberOfTickMarks; i++) {
+    range.push(lengthOfTickMark * i + 10);
+  }
+  
+  console.log(numberOfTickMarks);
+  var x = d3.scaleOrdinal()
+    .domain(data.map(function (d) { return d.genre; })) //.domain() needs an array [] of values
+    .range(range); //These tick marks
+  svg.append("g")
+    .attr("transform", "translate(0," + height + ")")
+    .call(d3.axisBottom(x))
+    .selectAll("text")
+    .style("text-anchor", "end")
+    .attr("dx", "-1.5em")
+    //.attr("dy", "-1.5em")
+    .attr("transform", "rotate(-45)");
+
+  // Add Y axis
+  var y = d3.scaleLinear()
+    .domain([0, 10])
+    .range([height, 0]);
+  svg.append("g")
+    .call(d3.axisLeft(y));
+
+    // Y axis label:
+    svg.append("text")
+      .attr("text-anchor", "end")
+      .attr("transform", "rotate(-90)")
+      .attr("y", -margin.left + 20)
+      .attr("x", -margin.top - 80)
+      .text("Personal Rating")
+
+      // Add X axis label:
+      svg.append("text")
+      .attr("text-anchor", "end")
+      .attr("x", -margin.left + 580)
+      .attr("y", height + margin.top + 68)
+      .text("Genre");
+
+  //console.log(data)
+  // Add the line
+  // svg.append("path")
+  //   .datum(data)
+  //   .attr("fill", "none")
+  //   .attr("stroke", "#69b3a2")
+  //   .attr("stroke-width", 1.5)
+  //   .attr("d", d3.line()
+  //     .x(function(d) { return x(d.genre); })
+  //     .y(function(d) { return y(d.genre); })
+  //     )
+  // // Add the points
+  svg
+    .append("g")
+    .selectAll("dot")
+    .data(data)
+    .enter()
+    .append("circle")
+    .attr("cx", function (d) { return x(d.genre) })
+    .attr("cy", function (d) { return y(d.rating) })
+    .attr("r", 5)
+    .attr("fill", "#69b3a2")
+
+</script>
