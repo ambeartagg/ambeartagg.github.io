@@ -1,20 +1,21 @@
 <!doctype html>
-<html>
+<html lang="en">
 
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Coffee Shop App Design</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-        crossorigin="anonymous"></script>
-    <link rel='stylesheet' href='style.css'>
-    <link rel='musicvideo' hfref='musicvideo.html'>
-
-    <meta name='viewport' content='width=device-width, initial-scale=1' />
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous">
+    </script>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary navbar-dark bg-company-red">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-company-red">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">Menu</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
@@ -24,13 +25,11 @@
             <div class="collapse navbar-collapse" id="navbarNavDropdown">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                        <a class="nav-link active" href="index.html">Home</a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                            aria-expanded="false">
-                            Projects
-                        </a>
+                            aria-expanded="false">Projects</a>
                         <ul class="dropdown-menu">
                             <li><a class="dropdown-item" href="musicvideo.html">Animated Music Video</a></li>
                             <li><a class="dropdown-item" href="openingcredits.html">Animated Opening Credits</a></li>
@@ -43,78 +42,50 @@
         </div>
     </nav>
 
-    <div class='container'>
-        <div class='row'>
-            <div class='col-md-2'></div>
-            <div class='col-md-8'>
-                <h1>Coffee Shop App Design</h1>
-                <p>This was my first time ever designing an application. I liked the app designs created by Starbucks,
-                    Dutch Bros. and
-                    similar companies. I took inspiration from these for my own project. In this experience I learned
-                    how to use
-                    Adobe XD and I learned more about different design principles. It was fun to make everything and put
-                    it
-                    together into a functioning blueprint.</p>
-
-            </div>
-        
-            <div class='col-md-2'></div>
+    <div class="container mt-5">
+        <div class="text-center">
+            <h1>Coffee Shop App Design</h1>
+            <p class="lead">This was my first time designing an application. Inspired by app designs from Starbucks,
+                Dutch Bros, and similar companies, I took the opportunity to create my own project. During this
+                experience, I learned to use Adobe XD and explored various design principles. It was exciting to design
+                everything and bring it together into a functioning blueprint.</p>
         </div>
+
         <hr>
-        <div class='row'>
-            <div class='col-md-2'></div>
-            <div class='col-md-8'>
-                <h2>The Process</h2>
-                <img src="cups.png" />
-            </div>
-            <div class='col-md-2'></div>
-        </div>
-        <div class='row'>
-            <div class='col-md-2'></div>
-            <div class='col-md-8'>
-        
-                <p>To begin my design, I used Adobe Illustrator to create a symbol set. I experimented with the golden
-                    spiral to create different shapes. After putting them together, I created some symbols that might be
-                    used to represent coffee or tea.</p>
-            </div>
-            <div class='col-md-2'></div>
-        </div>
 
-        <div class='col-md-2'></div>
+        <section class="my-5 bg-white p-4 rounded shadow">
+            <h2 class="text-center">The Process</h2>
+            <img src="cups.png" class="img-fluid rounded mx-auto d-block my-4" alt="Coffee cups">
+            <p class="text-justify">To begin my design, I used Adobe Illustrator to create a symbol set. I experimented
+                with the golden spiral to craft unique shapes. By combining these elements, I created symbols that could
+                represent coffee or tea in the app's design.</p>
+        </section>
+
+        <hr>
+
+        <section class="my-5 bg-white p-4 rounded shadow">
+            <h2 class="text-center">Creating the Wireframe</h2>
+            <img src="Wireframe.png" class="img-fluid rounded mx-auto d-block my-4" alt="Wireframe Design">
+            <p class="text-justify">After finalizing my symbols, I began piecing together the app wireframe in Adobe XD.
+                I started with a simple wireframe with placeholders for all the elements. Building on this foundation, I
+                added buttons, text, symbols, and other design elements to create each page of the app.</p>
+        </section>
+
+        <hr>
+
+        <section class="my-5 bg-white p-4 rounded shadow">
+            <h2 class="text-center">The Final Project</h2>
+            <video class="d-block mx-auto my-4" width="560" height="315" controls>
+                <source src="Adobe XD.mp4" type="video/mp4">
+                <source src="Adobe XD.ogg" type="video/ogg">
+                Your browser does not support the video tag.
+            </video>
+            <p class="text-justify">I made the wireframe interactive by linking individual pages. Users can navigate by
+                clicking buttons to transition between pages or dragging along scrollbars, showcasing how the app would
+                function in real-time. This project was both challenging and rewarding, and I am happy with the
+                result.</p>
+        </section>
     </div>
-    <hr>
-    <div class='row'>
-        <div class='col-md-2'></div>
-        <div class='col-md-8'>
-            <h2>Creating the Wireframe</h2>
-            <img src="Wireframe.png" />
-    
-            <p>Once I had my symbols ready, it was time to piece together the app wireframe in Adobe XD. I first started
-                with a much more simple wireframe with placeholders for everything. Once I had that base to start with,
-                I began adding the buttons, text, symbols, and more to each page.
-            </p>
-        </div>
-        <hr>
-        <div class='col-md-2'></div>
-        <div class='row'>
-            <div class='col-md-2'></div>
-            <div class='col-md-8'>
-                <h2>The Final Project</h2>
-                </video>
-                <video width="560" height="315" controls>
-                    <source src="Adobe XD.mp4" type="video/mp4">
-                    <source src="Adobe XD.ogg" type="video/ogg">
-                    Your browser does not support the video tag.
-                </video>
-              
-                <p>I made my wireframe interactive by connecting each of the individual pages, Clicking on these buttons
-                    to transition to a new page or dragging your cursor along a scrollbar demonstrates what navigating
-                    the app would look like. </p>
-            </div>
-            <div class='col-md-2'></div>
-
-        </div>
-
 </body>
 
 </html>
