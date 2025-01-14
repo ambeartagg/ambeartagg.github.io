@@ -1,20 +1,21 @@
 <!doctype html>
-<html>
+<html lang="en">
 
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Mobile Narrative Web Design</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
         crossorigin="anonymous"></script>
-    <link rel='stylesheet' href='style.css'>
-    <link rel='musicvideo' hfref='musicvideo.html'>
-
-    <meta name='viewport' content='width=device-width, initial-scale=1' />
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary navbar-dark bg-company-red">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-company-red">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">Menu</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
@@ -24,13 +25,11 @@
             <div class="collapse navbar-collapse" id="navbarNavDropdown">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                        <a class="nav-link active" href="index.html">Home</a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                            aria-expanded="false">
-                            Projects
-                        </a>
+                            aria-expanded="false">Projects</a>
                         <ul class="dropdown-menu">
                             <li><a class="dropdown-item" href="musicvideo.html">Animated Music Video</a></li>
                             <li><a class="dropdown-item" href="openingcredits.html">Animated Opening Credits</a></li>
@@ -43,30 +42,39 @@
         </div>
     </nav>
 
-    <div class='container'></div>
-        <div class='row'>
-            <div class='col-md-2'></div>
-            <div class='col-md-8'>
-    <h1>Mobile Narrative Web Design</h1>
-    <p>I had never really made a website prior to this one, and greatly enjoyed learning to use html, css, and
-        javascript. I wanted a way to organise some of my music, so I created a large data table with various filters.
-        After sorting through some of my favorite songs, I picked about 100 that I really liked and added them to the
-        table. I
-        also included information about them such as artist, genre, year released, and length. In addition to my data
-        table, I created three graphs. Two of the graphs were created using D3.js. The other was much more simple. These
-        graphs were helpful in learning about my music taste. They provided easy data visualization for things like the
-        most common era of music I listened to and the most common genre I listen to. Overall, it was fun to organize
-        some of my favorite songs. I loved being able to see my website come alive as I progressed through each step.
+    <div class="container mt-5">
+        <div class="text-center">
+            <h1>Mobile Narrative Web Design</h1>
+            <p class="lead">
+                I had never really made a website prior to this one, and greatly enjoyed learning to use HTML, CSS, and
+                JavaScript. I wanted a way to organize some of my music, so I created a large data table with various filters. 
+                After sorting through some of my favorite songs, I picked about 100 that I really liked and added them to the table. 
+                I also included information about them such as artist, genre, year released, and length. 
+            </p>
+        </div>
 
-    </p>
-</div>
-<div class='col-md-2'></div>
-</div>
+        <hr>
 
-    <a class= "center" href='./MobileNarrative/index.html'>Check out my website here!</a>
+        <section class="my-5">
+            <h2 class="text-center">Exploring My Music Taste</h2>
+            <p>
+                In addition to my data table, I created three graphs. Two of the graphs were created using D3.js, and the third 
+                was much simpler. These graphs helped me better understand my music taste, providing data visualizations for the 
+                most common era of music I listen to and the most popular genres.
+            </p>
+        </section>
 
+        <hr>
 
-
+        <section class="my-5 text-center">
+            <h2 class="text-center">Check Out My Website</h2>
+            <p>
+                This project was a fun way to organize my favorite songs and bring my website to life. I loved seeing my progress as I worked 
+                through each step. You can check out the final version of my website below!
+            </p>
+            <a href="./MobileNarrative/index.html" class="btn btn-primary mt-3">Visit My Website</a>
+        </section>
+    </div>
 </body>
 
 </html>
