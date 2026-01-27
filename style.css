@@ -13,7 +13,7 @@
 
 /* Body Styling */
 body {
-    background-color: #C9E7BA; /* Subtle background */
+    background-color: #D3E0CD; /* Subtle background */
     font-family: Arial, sans-serif; /* Fallback font for unsupported browsers */
     line-height: 1.6;
     color: #4F5C49; /* Neutral dark for text */
@@ -40,7 +40,7 @@ h2 {
 
 /* Utility Classes */
 .bg-company-red {
-    background-color: #A3C292 !important; /* Branded color */
+    background-color: #D3E0CD !important; /* Branded color */
 }
 
 /* Media Styling */
