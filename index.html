@@ -1,87 +1,88 @@
 <!doctype html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-        crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="style.css">
     <title>Amber Taggart</title>
-    <style>
-        body {
-            overflow-x: hidden;
-        }
-    </style>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-company-red">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#">Menu</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
-                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link active" href="index.html">Home</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                            aria-expanded="false">Projects</a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="coffeeshop.html">MLK Day Design</a></li>
-                            <li><a class="dropdown-item" href="webdesign.html">My Music Web Design</a></li>
-                            <li><a class="dropdown-item" href="musicvideo.html">Animated Music Video</a></li>
-                            <li><a class="dropdown-item" href="openingcredits.html">Animated Opening Credits</a></li>
-                        </ul>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
 
-    <!-- Hero Section -->
-    <section class="text-center py-5 bg-light">
-        <div class="container">
-            <h1 class="display-4" style="font-family: 'Nexa'; color: #2D2D32;">Amber Taggart</h1>
-            <p class="lead text-muted">Passionate about blending technology and art into memorable experiences.</p>
-        </div>
-    </section>
+<!-- HERO -->
+<section class="hero text-center">
+    <h1>Amber Taggart</h1>
+    <p class="subtitle">Blending technology, art, and interactive storytelling.</p>
+</section>
 
-    <!-- Contact Section -->
-    <section class="container my-5">
-        <div class="row align-items-center">
-            <div class="col-md-6">
-                <h2 style="font-family: 'Nexa'; color: #4F5C49;">Contact Me</h2>
-                <p>Email me: <a href="mailto:ambeartagg@gmail.com">ambeartagg@gmail.com</a></p>
-                <p>Call or text: <a href="tel:+19497288060">(949)-728-8060</a></p>
-                <a href="https://www.linkedin.com/in/amber-taggart/" target="_blank" class="btn btn-primary">Visit my LinkedIn</a>
-            </div>
-            <div class="col-md-6 text-center">
-                <img src="me4.jpg" alt="Amber Taggart" class="img-fluid rounded-circle" style="max-width: 200px;">
-            </div>
-        </div>
-    </section>
+<!-- PROJECTS -->
+<section class="container my-5">
+    <h2 class="section-title">Projects</h2>
 
-    <!-- About Section -->
-    <section class="container my-5">
-        <div class="row">
-            <div class="col-md-12 text-center">
-                <h2 style="font-family: 'Nexa'; color: #4F5C49;">About Me</h2>
-                <p class="mt-3">
-                    I am currently a student at Boise State University majoring in Games, Interactive Media, and Mobile
-                    Technology (GIMM). I am also pursuing a certificate in UX Design. Through my studies, I have explored video game design, UI/UX design, web design, and more.
-                    I aim to continue to grow as an artist and craft innovative and inspiring experiences.
-                </p>
-            </div>
+    <div class="row g-4">
+
+        <!-- Project Card -->
+        <div class="col-md-4">
+            <a href="coffeeshop.html" class="project-card">
+                <h3>MLK Day Design</h3>
+                <p>Graphic design work for Boise State’s MLK celebration.</p>
+            </a>
         </div>
-    </section>
+
+        <div class="col-md-4">
+            <a href="webdesign.html" class="project-card">
+                <h3>Music Web Design</h3>
+                <p>Interactive data-driven music exploration site.</p>
+            </a>
+        </div>
+
+        <div class="col-md-4">
+            <a href="musicvideo.html" class="project-card">
+                <h3>Animated Music Video</h3>
+                <p>Rotoscoped animation for “New Rose.”</p>
+            </a>
+        </div>
+
+        <div class="col-md-4">
+            <a href="openingcredits.html" class="project-card">
+                <h3>Opening Credits</h3>
+                <p>Animated tribute to Indiana Jones.</p>
+            </a>
+        </div>
+
+        <!-- EMPTY FUTURE PROJECTS -->
+        <div class="col-md-4">
+            <a href="project5.html" class="project-card empty">
+                <h3>Coming Soon</h3>
+            </a>
+        </div>
+
+        <div class="col-md-4">
+            <a href="project6.html" class="project-card empty">
+                <h3>Coming Soon</h3>
+            </a>
+        </div>
+
+    </div>
+</section>
+
+<!-- ABOUT -->
+<section class="container my-5 text-center">
+    <h2 class="section-title">About</h2>
+    <p class="about-text">
+        I am a student at Boise State University studying Games, Interactive Media, and Mobile Technology.
+        I focus on game design, UI/UX, and interactive storytelling, with a passion for creating immersive experiences.
+    </p>
+</section>
+
+<!-- CONTACT -->
+<section class="container my-5 text-center">
+    <h2 class="section-title">Contact</h2>
+    <p>Email: <a href="mailto:ambeartagg@gmail.com">ambeartagg@gmail.com</a></p>
+    <p>Phone: <a href="tel:+19497288060">(949) 728-8060</a></p>
+    <a href="https://www.linkedin.com/in/amber-taggart/" target="_blank" class="btn-green">LinkedIn</a>
+</section>
+
 </body>
-
 </html>

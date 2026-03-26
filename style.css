@@ -1,103 +1,105 @@
-/* General Reset and Box Sizing */
+/* RESET */
 * {
-    box-sizing: border-box;
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
-/* Font Definition */
+/* FONT */
 @font-face {
     font-family: 'Nexa';
     src: url("../nexa/Nexa-Heavy.ttf");
 }
 
-/* Body Styling */
+/* BODY */
 body {
-    background-color: #D3E0CD; /* Subtle background */
-    font-family: Arial, sans-serif; /* Fallback font for unsupported browsers */
+    background-color: #0d0f0d;
+    color: #d8e0d3;
+    font-family: Arial, sans-serif;
     line-height: 1.6;
-    color: #4F5C49; /* Neutral dark for text */
-    margin: 0;
-    padding: 0;
 }
 
-/* Headings */
+/* HERO */
+.hero {
+    padding: 6rem 1rem;
+}
+
 h1 {
-    text-align: center;
     font-family: 'Nexa', sans-serif;
-    color: #4F5C49; /* Dark text */
-    font-size: 4rem; /* Responsive font size */
-    margin-bottom: 1rem;
+    font-size: 4rem;
+    color: #e8f5e3;
 }
 
-h2 {
-    text-align: center;
-    font-family: 'Nexa', sans-serif;
-    color: #6B8160; /* Subtle contrast */
-    font-size: 2rem; 
+.subtitle {
+    color: #8fa98b;
+    margin-top: 1rem;
+}
+
+/* SECTION TITLES */
+.section-title {
+    font-family: 'Nexa';
+    margin-bottom: 2rem;
+    color: #a6dba0;
+}
+
+/* PROJECT CARDS */
+.project-card {
+    display: block;
+    padding: 2rem;
+    border-radius: 12px;
+    background: #151a15;
+    color: #d8e0d3;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    height: 100%;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 15px rgba(120, 255, 120, 0.2);
+    border: 1px solid #4CAF50;
+}
+
+.project-card h3 {
+    color: #c6f7c2;
     margin-bottom: 0.5rem;
 }
 
-/* Utility Classes */
-.bg-company-red {
-    background-color: #4F5C49 !important; /* Branded color */
-}
-
-/* Media Styling */
-img, video {
-    max-width: 100%;
-    height: auto;
-    display: block;
-}
-
-/* Centering Utility */
-.center {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.project-card.empty {
+    opacity: 0.5;
     text-align: center;
 }
 
-/* Additional Suggested Styles for Professional Look */
-
-/* Add spacing for body content */
-body {
-    padding: 2rem;
+/* ABOUT */
+.about-text {
+    max-width: 600px;
+    margin: auto;
+    color: #9fb59b;
 }
 
-/* Links for consistency */
+/* LINKS */
 a {
-    color: #4F5C49;
+    color: #7CFF7C;
     text-decoration: none;
-    font-weight: bold;
 }
 
 a:hover {
     text-decoration: underline;
 }
 
-/* Section Padding */
-section {
-    padding: 2rem;
-    margin-bottom: 2rem;
-    background: #fff;
-    border-radius: 8px; /* Subtle rounding */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
+/* BUTTON */
+.btn-green {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.7rem 1.5rem;
+    border-radius: 6px;
+    background: #1f2a1f;
+    color: #7CFF7C;
+    border: 1px solid #4CAF50;
+    transition: 0.3s;
 }
 
-/* Button Styling */
-button {
-    font-family: 'Nexa', sans-serif;
-    background-color: #6B8160;
-    color: #fff;
-    border: none;
-    padding: 0.75rem 1.5rem;
-    font-size: 1rem;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-button:hover {
-    background-color: #4F5C49;
+.btn-green:hover {
+    background: #4CAF50;
+    color: #0d0f0d;
 }
