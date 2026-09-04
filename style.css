@@ -155,16 +155,16 @@ a:hover {
 .hero {
     max-width: 1100px;
     margin: 0 auto;
-    padding: 7rem 1.5rem 5rem;
+    padding: 6rem 1.5rem 4rem;
 }
 
 .hero-content {
     display: grid;
-    grid-template-columns: 340px 1fr;
+    grid-template-columns: 220px 1fr;
     align-items: center;
-    gap: 4.5rem;
+    gap: 3.5rem;
 
-    max-width: 1000px;
+    max-width: 950px;
     margin: 0 auto;
 }
 
@@ -174,7 +174,7 @@ a:hover {
    ========================================================= */
 
 .hero-photo {
-    width: 100%;
+    width: 220px;
 }
 
 .hero-photo img {
@@ -184,7 +184,7 @@ a:hover {
     aspect-ratio: 4 / 5;
     object-fit: cover;
 
-    border-radius: 14px;
+    border-radius: 12px;
     border: 1px solid var(--border);
 }
 
@@ -198,14 +198,14 @@ a:hover {
 }
 
 .hero-intro h1 {
-    margin-bottom: 1rem;
+    margin-bottom: 0.75rem;
 }
 
 .hero-intro .subtitle {
     margin-bottom: 1.5rem;
 
     color: var(--green);
-    font-size: 1.1rem;
+    font-size: 1.05rem;
 }
 
 .hero-intro hr {
@@ -214,30 +214,27 @@ a:hover {
 }
 
 .hero-intro p:not(.subtitle) {
-    max-width: 700px;
-    margin: 1.25rem 0;
+    max-width: 650px;
+    margin: 1.1rem 0;
 
     color: var(--text-soft);
 }
 
 
-/* =========================================================
-   HERO MOBILE
-   ========================================================= */
 
 @media (max-width: 768px) {
 
     .hero {
-        padding: 5rem 1.25rem 3rem;
+        padding: 4rem 1.25rem 3rem;
     }
 
     .hero-content {
         grid-template-columns: 1fr;
-        gap: 2.5rem;
+        gap: 2rem;
     }
 
     .hero-photo {
-        max-width: 300px;
+        width: 150px;
         margin: 0 auto;
     }
 
