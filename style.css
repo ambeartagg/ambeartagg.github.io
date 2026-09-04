@@ -148,6 +148,121 @@ a:hover {
     border: 1px solid var(--border);
 }
 
+/* =========================================================
+   HOMEPAGE HERO
+   ========================================================= */
+
+.hero {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 7rem 1.5rem 5rem;
+}
+
+.hero-content {
+    display: grid;
+    grid-template-columns: 340px 1fr;
+    align-items: center;
+    gap: 4.5rem;
+
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+
+/* =========================================================
+   HERO PHOTO
+   ========================================================= */
+
+.hero-photo {
+    width: 100%;
+}
+
+.hero-photo img {
+    display: block;
+
+    width: 100%;
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
+
+    border-radius: 14px;
+    border: 1px solid var(--border);
+}
+
+
+/* =========================================================
+   HERO INTRO
+   ========================================================= */
+
+.hero-intro {
+    text-align: left;
+}
+
+.hero-intro h1 {
+    margin-bottom: 1rem;
+}
+
+.hero-intro .subtitle {
+    margin-bottom: 1.5rem;
+
+    color: var(--green);
+    font-size: 1.1rem;
+}
+
+.hero-intro hr {
+    margin: 1.5rem 0;
+    max-width: 100%;
+}
+
+.hero-intro p:not(.subtitle) {
+    max-width: 700px;
+    margin: 1.25rem 0;
+
+    color: var(--text-soft);
+}
+
+
+/* =========================================================
+   HERO MOBILE
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+    .hero {
+        padding: 5rem 1.25rem 3rem;
+    }
+
+    .hero-content {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+    }
+
+    .hero-photo {
+        max-width: 300px;
+        margin: 0 auto;
+    }
+
+    .hero-intro {
+        text-align: center;
+    }
+
+    .hero-intro h1 {
+        font-size: 2.8rem;
+    }
+
+    .hero-intro .subtitle {
+        font-size: 1rem;
+    }
+
+    .hero-intro hr {
+        max-width: 80%;
+        margin: 1.5rem auto;
+    }
+
+    .hero-intro p:not(.subtitle) {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
 
 /* =========================================================
    SECTION TITLES
