@@ -220,7 +220,15 @@ a:hover {
     color: var(--text-soft);
 }
 
-
+.project-image {
+    display: block;
+    width: auto;
+    max-width: 100%;
+    max-height: 550px;
+    height: auto;
+    object-fit: contain;
+    margin: 0 auto;
+}
 
 @media (max-width: 768px) {
 
